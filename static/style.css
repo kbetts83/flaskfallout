@@ -1,0 +1,32 @@
+
+#map {
+  height: 600px;
+  /* Te height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+body {
+  background-color: black;
+  color: #05f71e;
+}
+
+.card {
+  background:  #005903 !important; 
+  border-radius: 0;
+}
+
+div.ex1 {
+  height: 600px;
+  overflow: scroll;
+}
+
+div.icons {
+  align: right;
+}
+
+ div.butt {
+   font-size: 100px;
+ }
+
+

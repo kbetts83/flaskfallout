@@ -1,0 +1,15 @@
+{% block content%}
+
+{% for place in places %}
+    <div class='card'>
+    <div class='card-body'>
+    <h4><span class="material-symbols-outlined">label</span>
+    {{place.locationName}}</h4>
+    {{place.description}}
+    <br>
+    <br>
+    </div>
+    </div>
+{% endfor %}
+
+{% endblock %}
