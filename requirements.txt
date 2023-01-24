@@ -12,7 +12,6 @@ docutils==0.19
 Flask==2.2.2
 Flask-Caching==2.0.2
 Flask-CKEditor==0.4.6
-flask-googlemaps==0.4.1
 Flask-WTF==1.1.1
 ghp-import==2.1.0
 gunicorn==20.1.0
