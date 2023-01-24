@@ -75,5 +75,5 @@ async function initMap() {
         markerAndText(mapIcons['blank'], textCoord, placeName, map)
     }
 }
-
+console.log ("if you can read this, you have no life. I'll also give you a cool item")
 window.initMap = initMap;
