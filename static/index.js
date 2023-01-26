@@ -16,7 +16,8 @@ mapIcons = {
     "radio": "https://lh3.googleusercontent.com/r-qyqv_YItsIHNFaxeatoRODjy21l5WxIJ-llW86YUPr-iJBD87pck1q50PGf0RDS-uy0DX0itajp3tRX-P01ybvae0MlANSypuKFN-T9nw9Gav7WRGrqcm5A7cmP4hoY9OZXd4hDg=w2400",
     "restaurant": "https://lh3.googleusercontent.com/Myb7JBL2p14TWNGvYNJtdTftPu5pYfazevoJdZWb_4ANRH6OgX-fetCTYHef2jV8T17eQRF4-l9rDYQDn5sDjnXhLzXuDfHuJ6ZPA1u-O-NcXl26o13LJie2JdsVFv7uSifLJ67YoA=w2400",
     "vault": "https://lh3.googleusercontent.com/TIwZkQeoFLPVnMeYoKkDjSVxWr1-lWogxuTyQHkCZsEdTEoOoXZFRY_0YK0caqbpTAdZ7er3XSDyZGQXw5qSty-fj4dH8Fv_fChNaYJnoHYSImFPixjru1AtGyWmJD9KnYoLmtCK6Q=w2400",
-    "blank" : "https://lh3.googleusercontent.com/NVxr2rxUTODB6H4T0NDasE15KV1e-rXINBzoAf0l9AE1_MS72yZDPSahWBe32L_mZBVX6yhB2itH6B4ZCyr8cY7DtYRXSNu0E5c5I2VzY8G8IYUStc2thmZ-Xck7k8gN7W92X5qjNw=s1-p-k"
+    "blank" : "https://lh3.googleusercontent.com/NVxr2rxUTODB6H4T0NDasE15KV1e-rXINBzoAf0l9AE1_MS72yZDPSahWBe32L_mZBVX6yhB2itH6B4ZCyr8cY7DtYRXSNu0E5c5I2VzY8G8IYUStc2thmZ-Xck7k8gN7W92X5qjNw=s1-p-k",
+    "sea" : "https://lh3.googleusercontent.com/0vbAXs_QU6n5mLY3G2luGBCcz-8UXqorRACjJu88ZLBJPHfkKKbbwz6X3f69Iw96EVDPRlOQwdN_yuLKBsBa5UmXyBSERFjjJfzmVtCfkVtrraYI3hEdd7wUACcv8fYn2bl6X8rWvw=w2400"
 }
 
 //main map function
