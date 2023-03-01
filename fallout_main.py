@@ -14,9 +14,10 @@ def login_filter():
 
     #connect to mysql
     mydb = MySQL_Functions.connect_mysql()
+    here = MySQL_Functions.fetch_here(mydb)
     places = MySQL_Functions.fetch_places(mydb)
 
-    return render_template('main.html', places = places)
+    return render_template('main.html', places = places, here = here)
 
 #this launches the server in debug mode
 if __name__ == '__main__':

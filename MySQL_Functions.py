@@ -26,3 +26,8 @@ def fetch_people(mydb, place):
 	people = mycursor.fetchall()
 	return people
 
+def fetch_here(mydb):
+	mycursor = mydb.cursor(dictionary=True)
+	mycursor.execute ("select lng, lat from falloutplace where locationname = 'here'")	
+	here = mycursor.fetchall()
+	return here[0]
