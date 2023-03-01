@@ -27,6 +27,7 @@ mapIcons = {
 
 //main map function
 async function buildGoogleAPI(location) {
+    // build the google api key
     googlestart = "https://maps.googleapis.com/maps/api/geocode/json?address=";
     var address = location.address;
     var k = "&key="
@@ -44,12 +45,13 @@ async function checkLocation2(geolocation) {
         results = await json.results[0].geometry.location
         return results
     } catch {
-        console.log(geolocation)
         return { lat: 0, lng: 0 }
     }
 }
 
 async function markerAndText(iconValue, coordinates, placeName, map) {
+    //set up special stuff for the here marker
+    if (placeName == 'here'){placeName = " "}
     const marker2 = await new google.maps.Marker({ //and make them a marker
         icon: iconValue,
         position: { lat: coordinates.lat, lng: coordinates.lng },
@@ -63,25 +65,34 @@ async function markerAndText(iconValue, coordinates, placeName, map) {
     });
 }
 
-
 // Initialize and add the map
 async function initMap() {
-    // Set up map at Ronto
-    const ronto = { lat: 43.652, lng: -79.3832 };
+    // Set up map at startingpoint
+    startingPoint = {lat : Number(here.lat), lng: Number(here.lng)}
+
     const map = new google.maps.Map(document.getElementById("map"), {
         mapId: "acfe604f1d6e7b3c",
-        zoom: 12,
-        center: ronto,
+        zoom: 16,
+        center: startingPoint,
     });
 
     // // Marker positions - sveral locations
     for (let i = 0; i < location_list_json.length; i++) {
+
+        if (location_list_json[i].lat && location_list_json[i].lng){
+            latitude = Number (location_list_json[i].lat);
+            longitude = Number (location_list_json[i].lng);
+            coordinates = {lat : latitude, 
+                           lng:  longitude}
+        } else {
+
         geolocation = await buildGoogleAPI(location_list_json[i]);
+        coordinates = await checkLocation2(geolocation); // get coordinates
+    }
         iconKey = await String(location_list_json[i].icon);
         iconValue = await mapIcons[iconKey]
-        coordinates = await checkLocation2(geolocation); // get coordinates
         placeName = await String(location_list_json[i].locationName)
-        markerAndText(iconValue, coordinates, ".", map)
+        markerAndText(iconValue, coordinates, " ", map)
         textCoord = { lat: coordinates.lat - 0.0001, lng: coordinates.lng }
         markerAndText(mapIcons['blank'], textCoord, placeName, map)
     }
