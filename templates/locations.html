@@ -1,0 +1,19 @@
+{% block content%}
+{% for place in places %}
+{% if place.locationName != 'here' %}
+    <div class='card'>
+    <div class='card-body'>
+    <h4>
+    <script>iconLocation = mapIcons. {{ place.icon }};
+    document.write('<img src='+iconLocation+' width="25">')
+    </script>
+    {{place.locationName}}
+    </h4>
+    {{place.description}}
+    <br>
+    <br>
+    </div>
+    </div>
+{% endif %}
+{% endfor %}
+{% endblock %}
