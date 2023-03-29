@@ -23,7 +23,8 @@ mapIcons = {
     "church": "https://lh3.googleusercontent.com/2Keo_7z3SIoDaYjfoGjJko2QDoC86Y9EOKpvQFz_LpT5ds6QWsd_DK7dF6GefpaCDBztjRUNwJIz74ZaoRWn9buEfXegFpgsDZU_F6OhGYQD8sfHBbfPpnOqAl_gpGuPlLbf42FwxA=w2400",
     "trailer": "https://lh3.googleusercontent.com/Ox34wvB7AyEKE4z9IX2qq2GgEjJI3owo_1c4GCnMIhi4GswkZQ5myYvXLYD5KSgaYbdrlkmd4P-dA_7sBMd78pa0aNLA1rACurBRVOW_I4YONPXeb48D6jyxiXP53cO4swVDqebvgw=w2400",
     "medic": "https://lh3.googleusercontent.com/pArMCs3qUb_ek5sV2f5GMXzAGQmjpo4xP-TY-6guAxSNa6di2fZFHZteXf2QzhOG7dAam9thmd0m5tLhnAp1KaFJxiEY8CDFBHnLiAWd6mXtoeDa7jApNZX9kIqsAcuQwEKmDk6DCQ=w2400",
-    "lawrence" : "https://lh3.googleusercontent.com/pw/AMWts8BBaZUo6qVfqi4cyRxvQBvDHdDbE43xpU2K91uTwnY-xgtMKy8gGsXCo7LTraee95JeCKRUqLzmIcEK9At-l6IgxB6nwaGeNTCrZgFvPGf3_e2Wjv0=s30-p-k"
+    "lawrence" : "https://lh3.googleusercontent.com/pw/AMWts8BBaZUo6qVfqi4cyRxvQBvDHdDbE43xpU2K91uTwnY-xgtMKy8gGsXCo7LTraee95JeCKRUqLzmIcEK9At-l6IgxB6nwaGeNTCrZgFvPGf3_e2Wjv0=s30-p-k",
+    "ops" : "https://lh3.googleusercontent.com/zZ3Io2F8bWF-a-VwMZFMXZrKMNbw-xKUen2CaVj1V8zk82DnHbyM-2Vd8vq5-zuRLEh42v_TyFkDPPLLDJoJkgi20DFj076yPPNm-8sYARD4BTCKylZMT9vOqFBZBn7KKHGZjO_8Ww=w2400",
 }
 
 //main map function
