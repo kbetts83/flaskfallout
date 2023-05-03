@@ -7,17 +7,12 @@ charset-normalizer==2.0.12
 click==8.1.3
 colorama==0.4.6
 csscompressor==0.9.5
-Django==4.1.5
 docutils==0.19
 Flask==2.2.2
 Flask-Caching==2.0.2
 Flask-CKEditor==0.4.6
-flask-googlemaps==0.4.1
 Flask-WTF==1.1.1
-ghp-import==2.1.0
-googlemaps==4.10.0
 gunicorn==20.1.0
-heroku==0.1.4
 htmlmin==0.1.12
 idna==3.4
 itsdangerous==2.1.2
@@ -30,10 +25,6 @@ lxml==4.9.2
 Markdown==3.3.7
 MarkupSafe==2.1.2
 mergedeep==1.3.4
-mkdocs==1.4.2
-mkdocs-material==9.0.6
-mkdocs-material-extensions==1.1.1
-mkdocs-minify-plugin==0.6.2
 mysql-connector==2.2.9
 noise==1.2.2
 packaging==23.0
@@ -42,7 +33,7 @@ Pillow==9.4.0
 pygame==2.1.2
 Pygments==2.14.0
 pymdown-extensions==9.9.2
-python-dateutil==1.5
+python-dateutil===2.8.1
 PyYAML==6.0
 pyyaml_env_tag==0.1
 regex==2022.10.31
