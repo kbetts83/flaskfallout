@@ -11,10 +11,30 @@ def connect_mysql():
 
 	return mydb
 
-def fetch_places(mydb):
+def fetch_places(mydb, empty_coor):
 	mycursor = mydb.cursor(dictionary=True)
-	mycursor.execute ("select * from falloutplace where hidden = 0")	
-	places = mycursor.fetchall()
+	if empty_coor == False:
+
+		#get the latitude and longitude of here - kind of dumb but i'm getting frustrated
+		mycursor.execute ("select lat from falloutplace where locationname = 'here' ")
+		lat = mycursor.fetchall()[0]["lat"]
+		mycursor.execute ("select lng from falloutplace where locationname = 'here' ")
+		lng = mycursor.fetchall()[0]["lng"]
+
+		mycursor = mydb.cursor(dictionary=True)
+		sql = """SELECT *, ABS(%s - lat) + ABS(%s - lng) AS distance
+				FROM falloutplace
+				WHERE hidden = 0
+				ORDER BY distance;"""
+
+		val = (lat,lng)
+
+		mycursor.execute(sql, val)
+		places = mycursor.fetchall()
+
+	if empty_coor == True:
+		mycursor.execute ("select * from falloutplace where lat is null or lng is null")	
+		places = mycursor.fetchall()
 
 	return places
 
@@ -35,3 +55,17 @@ def fetch_here(mydb):
 	
 	return here[0]
 
+def write_coordinates(mydb, lat,lng, townid):
+	mycursor = mydb.cursor()
+	sql = "UPDATE falloutplace SET lat = (%s),lng =  (%s) WHERE townid = (%s);"
+	val = (lat,lng,townid)
+
+	mycursor.execute(sql, val)
+
+	mydb.commit()
+
+mydb = connect_mysql()
+butt = fetch_places(mydb, 0)
+for b in butt:
+	print (b)
+	print ("")

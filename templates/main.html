@@ -9,6 +9,9 @@
     <!--css-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
 
+    <!-- icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <!--js-->
     <script>
     var location_list_json = JSON.parse('{{ places | tojson | safe}}');
@@ -16,33 +19,13 @@
     </script>
     <script src="{{ url_for('static', filename='index.js') }}"></script>
 
-    <!-- icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
 </head>
 
 <body>
-    <div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 m-2">
-                    <a href="https://fontmeme.com/fallout-font/"><img src="https://fontmeme.com/permalink/221105/bb805f9be572f66338ac2cd64d29b7fa.png" alt="fallout-font" border="0"></a>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <div id="map">
-                        </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="ex1">
-                            {% include 'locations.html' %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 m-2">
-            </div>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGqQuAH6MEcprMsMH5CayhlcXda1ohDHc&callback=initMap&v=weekly" defer> </script>
+{% block content %}
+
+{% endblock %}
+
 </body>
 
 </html>

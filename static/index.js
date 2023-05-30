@@ -24,7 +24,7 @@ mapIcons = {
     "trailer": "https://lh3.googleusercontent.com/Ox34wvB7AyEKE4z9IX2qq2GgEjJI3owo_1c4GCnMIhi4GswkZQ5myYvXLYD5KSgaYbdrlkmd4P-dA_7sBMd78pa0aNLA1rACurBRVOW_I4YONPXeb48D6jyxiXP53cO4swVDqebvgw=w2400",
     "medic": "https://lh3.googleusercontent.com/pArMCs3qUb_ek5sV2f5GMXzAGQmjpo4xP-TY-6guAxSNa6di2fZFHZteXf2QzhOG7dAam9thmd0m5tLhnAp1KaFJxiEY8CDFBHnLiAWd6mXtoeDa7jApNZX9kIqsAcuQwEKmDk6DCQ=w2400",
     "lawrence" : "https://lh3.googleusercontent.com/pw/AMWts8BBaZUo6qVfqi4cyRxvQBvDHdDbE43xpU2K91uTwnY-xgtMKy8gGsXCo7LTraee95JeCKRUqLzmIcEK9At-l6IgxB6nwaGeNTCrZgFvPGf3_e2Wjv0=s30-p-k",
-    "ops" : "https://lh3.googleusercontent.com/zZ3Io2F8bWF-a-VwMZFMXZrKMNbw-xKUen2CaVj1V8zk82DnHbyM-2Vd8vq5-zuRLEh42v_TyFkDPPLLDJoJkgi20DFj076yPPNm-8sYARD4BTCKylZMT9vOqFBZBn7KKHGZjO_8Ww=w2400",
+    "ops" : "https://lh3.googleusercontent.com/zZ3Io2F8bWF-a-VwMZFMXZrKMNbw-xKUen2CaVj1V8zk82DnHbyM-2Vd8vq5-zuRLEh42v_TyFkDPPLLDJoJkgi20DFj076yPPNm-8sYARD4BTCKylZMT9vOqFBZBn7KKHGZjO_8Ww=w2400"
 }
 
 //main map function
@@ -38,9 +38,6 @@ async function buildGoogleAPI(location) {
     return geolocation
 }
 
-async function tryThis(marker2) {
-    console.log('toot')
-}
 
 async function checkLocation2(geolocation) {
     let results;
@@ -94,6 +91,7 @@ async function initMap() {
 
             geolocation = await buildGoogleAPI(location_list_json[i]);
             coordinates = await checkLocation2(geolocation); // get coordinates
+
         }
         iconKey = await String(location_list_json[i].icon);
         iconValue = await mapIcons[iconKey]

@@ -12,6 +12,8 @@ Flask==2.2.2
 Flask-Caching==2.0.2
 Flask-CKEditor==0.4.6
 Flask-WTF==1.1.1
+flask-googlemaps==0.4.1
+googlemaps==4.10.0
 gunicorn==20.1.0
 htmlmin==0.1.12
 idna==3.4
