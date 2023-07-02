@@ -1,0 +1,30 @@
+{% block content%}
+
+<!-- Button trigger modal -->
+<a href="#" class = "material-symbol" data-toggle="modal" 
+data-target="#{{"mod" ~ place.people[0]['townID']}}">
+<span class="material-symbols-outlined">face</span></a>
+
+<!-- Modal -->
+<div class="modal fade" id="{{"mod" ~ place.people[0]['townID']}}" tabindex="-1" role="dialog" aria-labelledby= 
+"exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{place.locationName}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <ul>
+      {% for person in place.people %}
+      <li>{{person['name']}}</li>
+      {% endfor %}
+    </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

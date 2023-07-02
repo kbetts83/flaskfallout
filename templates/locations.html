@@ -1,0 +1,30 @@
+{% block content%}
+    {% for place in places %}
+        {% if place.locationName != 'here' %}
+        {% set id = place.townid %}
+        <div class='card'>
+        <div class='card-body'>
+        <h4>
+        <script>iconLocation = mapIcons. {{ place.icon }};
+        document.write('<img src='+iconLocation+' width="25">')
+        </script>
+        {{place.locationName}} 
+        </h4>
+        {% if place.people %}
+        {% include 'modal.html' %}
+        {% endif %}
+
+        <!-- 
+        <span class="material-symbols-outlined">face</span>
+
+            <span class="material-symbols-outlined">paid</span> -->
+
+        <br>
+        {{place.description}}
+        <br>
+        <br>
+        </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
