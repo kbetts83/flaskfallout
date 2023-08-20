@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% block content%}
+
+{{places}}
+<!--
+<script>
+console.log ('boob')
+
+async function getEmptyCoord(location_list_json) {
+
+    unCoordList = []
+    unCoordListBlocked = []
+
+    for (let i = 0; i < location_list_json.length; i++) {
+        geolcation = await buildGoogleAPI(location_list_json[i])
+        coor = await checkLocation2(geolcation)
+        if (typeof coor.lat === "number" && typeof coor.lng === "number") {
+            unCoordList.push([location_list_json[i].townid,
+                location_list_json[i].locationName,
+                coor]
+            )
+        } else {
+            unCoordListBlocked.push([location_list_json[i].townid,
+                location_list_json[i].locationName,
+                coor
+            ])
+        }
+        console.log (unCoordList)
+    }
+}
+</script>
+
+<script> 
+//get all the uncoordinated map items
+getEmptyCoord(location_list_json)
+
+</script>
+-->
+
+{% endblock %}

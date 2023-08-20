@@ -1,0 +1,64 @@
+{% block content%}
+<!-- Button trigger modal -->
+<a href="#" class="material-symbol" data-toggle="modal" data-target="#{{"mod" ~ place.stores}}">
+    <span class="material-symbols-outlined">paid</span></a>
+<!-- Modal -->
+<div class="modal fade" id="{{"mod" ~ place.stores}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{place.locationName}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {% for store in place.stores %}
+                <h5>{{store['storename']}} </h5>
+                <i> {{store['storedescription']}}</i>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Weight</th>
+                            <th scope="col">Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if store['items'][0] is defined %}
+                        {% for item_key in store['items'] %}
+
+                        {% for i in items%}
+                        {% if i['itemNumber'] == item_key %}
+
+                            <tr>
+                                <th scope="row">{{i['itemname']}}</th>
+                                <th scope="row">{{i['cost']}}</th>
+                                <th scope="row">{{i['weight']}}</th>
+                                <th scope="row">{{i['info']}}</th>
+                            </tr>
+
+                        {% endif %}
+                        {% endfor %}
+
+
+                        {% endfor %}
+                        {% else %}
+                        <tr>
+                            <th scope="row">sold out</th>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                            <th scope="row"></th>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+                <br>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block content%}
+
+<script>
+async function getEmptyCoord(location_list_json) {
+
+        geolcation = await buildGoogleAPI(location_list_json[i])
+        coor = await checkLocation2(geolcation)
+}
+</script>
+
+
+
+{% for place in places %}
+
+{% if place.lat == None or place.lng == None %}
+{{place.locationName}} {{place.lng}} {{place.lat}}
+<p>
+{% endif %}
+
+{% endfor %}
+
+{% endblock %}
